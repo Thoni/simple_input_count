@@ -3,7 +3,7 @@
  /**
   * Namespace
   */
-namespace Thoni;
+//namespace Thoni;
 
 if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 
@@ -17,7 +17,7 @@ if (!defined('TL_ROOT')) die('You cannot access this file directly!');
  */
 
 
-class myInputCount extends Contao\System
+class myInputCount extends \System
 {
 	public function addScript($strBuffer, $strTemplate)
 	{
@@ -35,7 +35,7 @@ class myInputCount extends Contao\System
 				$myData = explode(",",$mySetting);
 				if($myData[0] != "" && is_int($myData[1]) && is_int($myData[2])) $addValue .= "sic_vars[] = array('$myData[0]',$myData[1],$myData[2])";
 			}
-			$addValue .= "var sic_lang = array();sic_lang['siclength'] = array($GLOBALS['TL_LANG']['MOD']['sic_length'][0],$GLOBALS['TL_LANG']['MOD']['sic_length'][1]);sic_lang['actsiclength'] = array($GLOBALS['TL_LANG']['MOD']['sic_actlength'][0],$GLOBALS['TL_LANG']['MOD']['sic_actlength'][1]);</script>";
+			$addValue .= "var sic_lang = array();sic_lang['siclength'] = array('".$GLOBALS['TL_LANG']['MOD']['sic_length'][0]."','".$GLOBALS['TL_LANG']['MOD']['sic_length'][1]."');sic_lang['actsiclength'] = array('".$GLOBALS['TL_LANG']['MOD']['sic_actlength'][0]."','".$GLOBALS['TL_LANG']['MOD']['sic_actlength'][1]."');</script>";
 	    }
 	    return $addValue.$strBuffer;
 	}
