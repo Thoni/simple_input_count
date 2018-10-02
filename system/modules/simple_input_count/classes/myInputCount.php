@@ -3,7 +3,8 @@
  /**
   * Namespace
   */
-
+namespace Thoni;
+use \Contao\System
 
 if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 
