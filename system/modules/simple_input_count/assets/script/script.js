@@ -20,8 +20,8 @@ jQuery(document).ready(function(){
 	function sic_settip (oid)
 	{
 		var textVal = jQuery('#'+oid).val();
-		var tipText = sic_lang["length"][0]+sic_check[oid][1]+" - "+sic_check[oid][2]+sic_lang["length"][1];
-		tipText += "<br>"+sic_lang["actlength"][0]+textVal.length+sic_lang["actlength"][1];
+		var tipText = sic_lang["siclength"][0]+sic_check[oid][1]+" - "+sic_check[oid][2]+sic_lang["siclength"][1];
+		tipText += "<br>"+sic_lang["actsiclength"][0]+textVal.length+sic_lang["actsiclength"][1];
 		jQuery('#'+oid+".showsictip").css("content",tipText);
 		sic_check(oid);
 	}
