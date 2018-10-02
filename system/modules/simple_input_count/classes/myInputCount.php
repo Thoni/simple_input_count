@@ -33,7 +33,7 @@ class myInputCount extends Contao\System
 			foreach ($mySettings AS $mySetting)
 			{
 				$myData = explode(",",$mySetting);
-				if($myData[0] != "" && is_int($myData[1]) && is_int($myData[2])) $addValue .= "sic_vars[] = array('$myData[0]',$myData[1],$myData[2]);"
+				if($myData[0] != "" && is_int($myData[1]) && is_int($myData[2])) $addValue .= "sic_vars[] = array('$myData[0]',$myData[1],$myData[2])";
 			}
 			$addValue .= "			var sic_lang = array();
 			sic_lang["length"] = array($GLOBALS['TL_LANG']['MOD']['sic_length'][0],$GLOBALS['TL_LANG']['MOD']['sic_length'][1]);
