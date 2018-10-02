@@ -1,0 +1,31 @@
+{
+    "name": "thoni/simple_input_count",
+    "type": "contao-module",
+    "stability": "beta",
+    "description": "Textlänge anzeigen.",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+	    {
+        "name": "Frank Thonak",
+        "email": "info@thomkit.de",
+        "homepage": "http://thomkit.de",
+        "role": "Developer"
+    	    }
+    ],
+    "require": {
+        "php": "^7.1",
+        "contao/core-bundle": "^4.4"
+    },
+    "autoload": {
+		  "psr-4": {
+			  "thoni\\simple_input_count\\": "src/"
+		}
+    },
+    "extra": {
+	  "contao": {
+		  "sources": {
+			  "system/modules/simple_input_count/": "system/modules/simple_input_count"
+		  }
+	  }
+}
+}
