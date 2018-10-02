@@ -17,7 +17,7 @@ if (!defined('TL_ROOT')) die('You cannot access this file directly!');
  */
 
 
-class myInputCount extends Contao\System
+class myInputCount extends System
 {
 	public function addScript($strBuffer, $strTemplate)
 	{
