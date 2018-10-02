@@ -37,7 +37,7 @@ class myInputCount extends Contao\System
 			}
 			$addValue .= "			var sic_lang = array();
 			sic_lang['siclength'] = array($GLOBALS['TL_LANG']['MOD']['sic_length'][0],$GLOBALS['TL_LANG']['MOD']['sic_length'][1]);
-			sic_lang['actsiclength'] = array($GLOBALS['TL_LANG']['MOD']['sic_actlength'][0],$GLOBALS['TL_LANG']['MOD']['sic_actlength'][1])
+			sic_lang['actsiclength'] = array($GLOBALS['TL_LANG']['MOD']['sic_actlength'][0],$GLOBALS['TL_LANG']['MOD']['sic_actlength'][1]);
 		</script>";
 	    }
 	    return $addValue.$strBuffer;
