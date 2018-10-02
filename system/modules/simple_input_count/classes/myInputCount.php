@@ -4,7 +4,6 @@
   * Namespace
   */
 namespace Thoni;
-use \Contao\System;
 
 if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 
@@ -18,7 +17,7 @@ if (!defined('TL_ROOT')) die('You cannot access this file directly!');
  */
 
 
-class myInputCount extends System
+class myInputCount extends Contao\System
 {
 	public function addScript($strBuffer, $strTemplate)
 	{
