@@ -25,7 +25,5 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['simple_input_count_data'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_settings']['simple_input_count_data'],
 	'inputType'			=> 'textarea',
-	'eval'				=> array('helpwizard' => true),
-    'explanation'  		=> 'sic-help',
-	'sql'				=> "text NOT NULL default ''"
+	'sql'				=> "text NULL"
 );
