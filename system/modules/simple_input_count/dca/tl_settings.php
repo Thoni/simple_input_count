@@ -24,6 +24,5 @@ $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] .= ';{simple_input_coun
 $GLOBALS['TL_DCA']['tl_settings']['fields']['simple_input_count_data'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_settings']['simple_input_count_data'],
-	'inputType'			=> 'textarea',
-	'sql'				=> "text NULL"
+	'inputType'			=> 'textarea'
 );
