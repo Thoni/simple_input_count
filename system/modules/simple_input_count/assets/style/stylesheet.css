@@ -1,3 +1,4 @@
-.showsictip:before {position:absolute;padding:5px;right:0px;top:-40px;font-size:14px;background:#fff;border:1px solid #000;}
-
+.sic_tip {display:block;position:relative;padding:5px;font-size:14px;background:#fff;border:1px solid #000;}
+input.sic_red, textarea.sic_red {border:1px solid #f00!important;}
+input.sic_green, textarea.sic_green {border:1px solid #0f0!important;}
 
