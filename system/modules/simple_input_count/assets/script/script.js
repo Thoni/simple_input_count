@@ -1,43 +1,58 @@
+jQuery.noConflict();
 
-jQuery(document).ready(function(){
-	function sic_check (oid){
-		if( jQuery('#'+oid).length )
+
+jQuery( document ).ready(function(){
+
+	var sic_label = "";
+
+	function sic_check (item){
+		var myObj = jQuery(document.getElementById(item[0]));
+		if( myObj.length )
 		{
-			var textVal = jQuery('#'+oid).val();
-		    if(textVal.length >= sic_check[oid][1] && textVal.length <= sic_check[oid][2])
+			var textVal = myObj.val();
+			console.log(textVal.length);
+			console.log(item[1]);
+			console.log(item[2]);
+		    if(textVal.length >= item[1] && textVal.length <= item[2])
 		    {
-				 jQuery('#'+oid).addClass('sic_green');
-				 jQuery('#'+oid).removeClass('sic_red');
+				 myObj.addClass('sic_green');
+				 myObj.removeClass('sic_red');
 			} else {
-				 jQuery('#'+oid).addClass('sic_red');
-				 jQuery('#'+oid).removeClass('sic_green');
+				 myObj.addClass('sic_red');
+				 myObj.removeClass('sic_green');
 			}
 		}
 
 
 	}
 
-	function sic_settip (oid)
+	function sic_settip (item)
 	{
-		var textVal = jQuery('#'+oid).val();
-		var tipText = sic_lang["siclength"][0]+sic_check[oid][1]+" - "+sic_check[oid][2]+sic_lang["siclength"][1];
-		tipText += "<br>"+sic_lang["actsiclength"][0]+textVal.length+sic_lang["actsiclength"][1];
-		jQuery('#'+oid+".showsictip").css("content",tipText);
-		sic_check(oid);
+		console.log("settip");
+		var myLabel = jQuery("label[for="+item[0]+"]");
+		var myObj = jQuery(document.getElementById(item[0]));
+		var textVal = myObj.val();
+		myLabel.html(sic_label+" - "+sic_lang["actsiclength"][0]+" "+textVal.length+" "+sic_lang["actsiclength"][1]+" - "+sic_lang["siclength"][0]+" "+item[1]+" - "+item[2]);
+		sic_check(item);
 	}
 
-	sic_vars.forEach(function(item) {
-    	sic_check(item[0]);
-    	jQuery('#'+item[0]).focus(function(){
-			jQuery('#'+item[0]).addClass("showsictip");
-			sic_settip(item[0]);
-		}
-    	jQuery('#'+item[0]).blur(function(){
-			jQuery('#'+item[0]).removeClass("showsictip");
-		}
-    	jQuery('#'+item[0]).keyup(function(){
-			sic_settip(item[0]);
-		}
+
+	jQuery.each(sic_vars , function(index, val) {
+	  	var item = val;
+  		var myObj = jQuery(document.getElementById(item[0]));
+    	sic_check(item);
+    	myObj.focus(function(){
+			myObj.addClass("showsictip");
+			sic_label = jQuery("label[for="+item[0]+"]").html();
+			sic_settip(item);
+		});
+    	myObj.blur(function(){
+			myObj.removeClass("showsictip");
+			jQuery("label[for="+item[0]+"]").html(sic_label);
+		});
+    	myObj.keyup(function(){
+			sic_settip(item);
+		});
 	});
 
-}
+});
