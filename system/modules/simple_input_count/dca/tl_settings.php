@@ -25,5 +25,11 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['simple_input_count_data'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_settings']['simple_input_count_data'],
 	'inputType'			=> 'textarea',
-	'eval'              		=> array 'rte'=>'ace|html')
+	'eval'              => array('rte'=>'','helpwizard'=>true),
+    'explanation'   	=> 'sic-help',
+    'save_callback'     => array(array('myInputCount', 'saveCallback')),
+    'load_callback'     => array(array('myInputCount', 'loadCallback')),
+
 );
+
+?>
