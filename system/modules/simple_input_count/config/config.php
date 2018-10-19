@@ -45,7 +45,7 @@
  *
  */
 
-if (TL_MODE == 'BE') $GLOBALS['TL_CSS']['simple_input_count'] = 'system/modules/simple_input_count/assets/style/stylesheet.css';
+if (TL_MODE == 'BE') $GLOBALS['TL_CSS']['simple_input_count'] = '../system/modules/simple_input_count/assets/style/stylesheet.css';
 
 /*
  * -------------------------------------------------------------------------
@@ -54,6 +54,8 @@ if (TL_MODE == 'BE') $GLOBALS['TL_CSS']['simple_input_count'] = 'system/modules/
  *
  */
 
+if (TL_MODE == 'BE') $GLOBALS['TL_JAVASCRIPT'][] = 'assets/jquery/js/jquery.min.js';
 if (TL_MODE == 'BE') $GLOBALS['TL_JAVASCRIPT']['simple_input_count'] = 'system/modules/simple_input_count/assets/script/script.js';
+
 
 ?>
