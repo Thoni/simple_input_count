@@ -3,7 +3,7 @@
 /**
  * Back end modules
  */
-$GLOBALS['TL_LANG']['MOD']['sic_length'] = array('Optimale Länge: ', ' Zeichen');
+$GLOBALS['TL_LANG']['MOD']['sic_length'] = array('Optimale Anzahl: ', ' Zeichen');
 $GLOBALS['TL_LANG']['MOD']['sic_actlength'] = array('Aktuell: ', ' Zeichen');
 
 
